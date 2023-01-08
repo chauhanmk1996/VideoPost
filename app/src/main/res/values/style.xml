@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="editTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/dp_48</item>
+        <item name="android:layout_marginTop">@dimen/dp_20</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/edittext_bg</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:paddingStart">@dimen/dp_12</item>
+        <item name="android:paddingEnd">@dimen/dp_12</item>
+        <item name="android:autofilledHighlight">@android:color/transparent</item>
+        <item name="android:importantForAutofill">no</item>
+    </style>
+
+    <style name="textViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_20</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="BottomSheetTopRoundedDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleTopRoundedWrapper</item>
+    </style>
+
+    <style name="bottomSheetStyleTopRoundedWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_autoShrink">true</item>
+        <item name="android:background">@drawable/top_rounded_curve_shape</item>
+        <item name="android:animateLayoutChanges">false</item>
+    </style>
+</resources>

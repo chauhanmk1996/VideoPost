@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onItemClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="viewModel"
+            type="com.videoPlayer.ui.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.videoPlayer.ui.createPost.CreatePostActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            style="@style/textViewStyle"
+            android:text="@string/name"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_email"
+            style="@style/editTextStyle"
+            android:digits="@string/name_digit"
+            android:hint="@string/enter_name"
+            android:inputType="textPersonName"
+            android:maxLength="30"
+            android:text="@={viewModel.mNameLiveData}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_desc"
+            style="@style/textViewStyle"
+            android:text="@string/description"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_desc"
+            style="@style/editTextStyle"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_description"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLength="150"
+            android:maxLines="3"
+            android:minHeight="@dimen/dp_48"
+            android:overScrollMode="always"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:text="@={viewModel.mDescLiveData}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_image"
+            style="@style/textViewStyle"
+            android:text="@string/image"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/et_desc" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_image"
+            style="@style/editTextStyle"
+            android:digits="@string/name_digit"
+            android:focusable="false"
+            android:hint="@string/upload_image"
+            android:onClick="@{onItemClick}"
+            android:text="@={viewModel.mImageNameLiveData}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tv_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_video"
+            style="@style/textViewStyle"
+            android:text="@string/video"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/et_image" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_video"
+            style="@style/editTextStyle"
+            android:digits="@string/name_digit"
+            android:focusable="false"
+            android:hint="@string/upload_video"
+            android:onClick="@{onItemClick}"
+            android:text="@={viewModel.mVideoNameLiveData}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tv_video" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_thumb_image"
+            style="@style/textViewStyle"
+            android:text="@string/thumbnail"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/et_video" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_thumb_image"
+            style="@style/editTextStyle"
+            android:digits="@string/name_digit"
+            android:focusable="false"
+            android:hint="@string/upload_video_thumbnail"
+            android:onClick="@{onItemClick}"
+            android:text="@={viewModel.mThumbNameLiveData}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tv_thumb_image" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save"
+            android:layout_width="@dimen/dp_248"
+            android:layout_height="@dimen/dp_56"
+            android:layout_marginTop="@dimen/dp_32"
+            android:background="@drawable/edittext_bg"
+            android:elevation="@dimen/dp_4"
+            android:onClick="@{onItemClick}"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_thumb_image" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dp_24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dp_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

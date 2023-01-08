@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onItemClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="viewModel"
+            type="com.videoPlayer.ui.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.videoPlayer.ui.MainActivity">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_create_post"
+            android:layout_width="@dimen/dp_248"
+            android:layout_height="@dimen/dp_56"
+            android:layout_marginTop="@dimen/dp_180"
+            android:background="@drawable/edittext_bg"
+            android:elevation="@dimen/dp_4"
+            android:onClick="@{onItemClick}"
+            android:text="@string/create_post"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_show_post"
+            android:layout_width="@dimen/dp_248"
+            android:layout_height="@dimen/dp_56"
+            android:layout_marginTop="@dimen/dp_32"
+            android:background="@drawable/edittext_bg"
+            android:elevation="@dimen/dp_4"
+            android:onClick="@{onItemClick}"
+            android:text="@string/show_post"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_create_post" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

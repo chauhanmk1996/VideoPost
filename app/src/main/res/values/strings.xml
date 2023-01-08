@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">VideoPlayer</string>
+
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="error_something_went_wrong_please_retry">Something went wrong please retry</string>
+    <string name="connect_exception_error">Failed to connect to server</string>
+    <string name="socket_timeout_error">Server is taking longer time to respond</string>
+    <string name="name">Name</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="name_digit">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="description">Description</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="image">Image</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="upload_video_thumbnail">Upload Video Thumbnail</string>
+    <string name="video">Video</string>
+    <string name="upload_video">Upload Video</string>
+    <string name="thumbnail">Thumbnail</string>
+    <string name="save">Save</string>
+    <string name="please_choose_camera_or_gallery_for_image">Please choose camera or gallery for image</string>
+    <string name="create_post">Create Post</string>
+    <string name="show_post">Show Post</string>
+</resources>
